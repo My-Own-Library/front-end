@@ -1,0 +1,84 @@
+
+.father{
+  position: fixed;
+  top: 0; left: 0;
+  background-color: var(--background-black);
+  max-width: 310px;
+  min-width: 270px;
+  height: 100%;
+  border-right: var(--black-border) 1px solid;
+  padding: 25px 8px;
+}
+
+.father h1{
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.father header{
+  padding: 15px 20px;  
+  display: flex;
+  border-bottom: 1px solid var(--black-border);
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 28px;
+}
+
+.father header div{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.father div{
+  padding: 0px 5px;
+}
+
+.father h2{
+  background-color: var(--white);
+  padding: 6px 10px;
+  border-radius: 12px;
+  color: var(--black-border);
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 5px 0px;
+}
+
+.father section{
+  padding: 2px 6px;
+}
+
+.father h3{
+  cursor: pointer;
+  padding: 3px 10px;
+  margin: 4px 0px;
+  border-radius: 8px;
+}
+
+.contract{
+  position: fixed;
+  top: 0; left: 0;
+  background-color: var(--background-black);
+  max-width: 100px;
+  width: 100px;
+  height: 80px;
+  border-right: var(--black-border) 1px solid;
+  border-bottom: var(--black-border) 1px solid;
+  border-radius: 0px 0px 10px 0px;
+  padding: 25px 8px;
+  cursor: pointer;
+}
+
+.contract div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 40px;
+}

@@ -34,6 +34,12 @@
     #00000080
   );
 
+  --black: #000000;
+  --background-black: #111111;
+  --black-border: #272727;
+  --dark-letter: #444444;
+  --white: #ffffff;
+
   --callout-rgb: 238, 240, 241;
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
