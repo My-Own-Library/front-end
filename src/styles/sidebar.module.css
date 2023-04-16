@@ -59,6 +59,22 @@
   margin: 4px 0px;
   border-radius: 8px;
 }
+.father footer {
+  padding: 30px 15px;
+}
+
+.father footer button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  color: var(--white);
+  font-size: 20px;
+}
 
 .contract{
   position: fixed;
@@ -81,4 +97,15 @@
   width: 100%;
   height: 100%;
   font-size: 40px;
+}
+
+@media (max-width: 600px) {
+  .contract{
+    top:auto;
+    bottom: 0;
+    border-radius: 0px 10px 0px 0px;
+    border-right: var(--black-border) 1px solid;
+    border-top: var(--black-border) 1px solid;
+    border-bottom: none;
+  }
 }

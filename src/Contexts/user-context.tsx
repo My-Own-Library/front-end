@@ -2,10 +2,9 @@ import { createContext } from 'react';
 
 import useLocalStorage from '../hooks/useLocalStorage';
 
-const UserContext = createContext({});
-export default UserContext;
+const UserContext = createContext({}) ;
 
-export function UserProvider({ children }: {children: string}) {
+export function UserProvider({ children }: any) {
   const [userData, setUserData] = useLocalStorage('userData', {});
   
   return (
@@ -14,3 +13,5 @@ export function UserProvider({ children }: {children: string}) {
     </UserContext.Provider>
   );
 }
+
+export default UserContext;

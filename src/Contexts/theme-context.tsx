@@ -3,10 +3,9 @@ import { createContext } from 'react';
 import useLocalStorage from '../hooks/useLocalStorage';
 
 const ThemeContext = createContext({});
-export default ThemeContext;
 
 export function ThemeProvider({ children }: any) {
-  const [themeDataId, setThemeDataId] = useLocalStorage('themeData', 0);
+  const [themeDataId, setThemeDataId] = useLocalStorage('themeData', {});
   
   return (
     <ThemeContext.Provider value={{ themeDataId, setThemeDataId }}>
@@ -14,3 +13,5 @@ export function ThemeProvider({ children }: any) {
     </ThemeContext.Provider>
   );
 }
+
+export default ThemeContext;

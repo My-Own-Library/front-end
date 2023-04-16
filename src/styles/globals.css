@@ -34,11 +34,19 @@
     #00000080
   );
 
-  --black: #000000;
+  
   --background-black: #111111;
   --black-border: #272727;
   --dark-letter: #444444;
-  --white: #ffffff;
+  --white: #e6e6e6;
+
+  --black: #000000;
+  --black-1: #191919;
+  --black-2: #333333;
+  --black-3: #4d4d4d;
+  --black-4: #666666;
+  --black-5: #808080;
+  --black-6: #acacac;
 
   --callout-rgb: 238, 240, 241;
   --callout-border-rgb: 172, 175, 176;

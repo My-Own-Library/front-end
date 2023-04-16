@@ -1,0 +1,45 @@
+
+.father{
+  background-color: var(--white);
+  margin: auto;
+  color: var(--black-3);
+  border-radius: 10px;
+  min-height: 500px;
+  width: 600px;
+}
+
+.father header {
+  display: flex;
+  height: 50px;
+  justify-content: space-around;
+  border-bottom: 1px solid var(--black-6);
+
+}
+
+.father header section {
+  width: 50%;
+  height:50px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: var(--black-3);
+  cursor: pointer;
+}
+
+.father header .left{
+  border-right: 1px solid var(--black-6);
+  border-top-left-radius: 10px;
+}
+
+.father header .right {
+  border-top-right-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .father {
+    height: 100%;
+  }
+  
+}
