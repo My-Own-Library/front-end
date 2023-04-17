@@ -5,12 +5,9 @@ import { useRouter } from "next/router"
 import { FormEvent, useContext, useState } from "react"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
-import style from "@/styles/sign_forms.module.css"
+import style from "@/styles/signs/sign_forms.module.css"
 import { roboto } from "@/styles/fonts"
 import { motion } from "framer-motion"
-import ThemeContext from "@/Contexts/theme-context"
-
-
 
 export default function SignupForm() {
   const [email, setEmail] = useState<string>("")
@@ -54,7 +51,7 @@ export default function SignupForm() {
           <input type="password" required placeholder="Repeat Password" value={confirmPassword} onChange={(v) => setConfirmPassword(v.target.value)} />
           <motion.button type="submit">Signup</motion.button>
         </form>
-        <Link href={"/signin"}>Already have an account? Singin</Link>
+        <Link href={"/signin"} rel="preload" as="script">Already have an account? Singin</Link>
 
       </div>
       <ToastContainer />

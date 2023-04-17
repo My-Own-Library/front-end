@@ -1,0 +1,106 @@
+
+.father .border{
+  display:  flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  border-bottom: 1px solid var(--black-6);
+  color: var(--black-3);
+  cursor: pointer;
+}
+
+.father .border h1{
+  font-size: 20px;
+}
+
+.father .border h2 {
+  font-size: 18px;
+}
+
+.father .border h3{
+  font-size: 16px;
+}
+
+.father .action{
+  display:  flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--black-6);
+  color: var(--black-3);
+}
+
+.action div {
+  display: flex;
+  align-items: center;
+}
+
+.action div section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 6px 15px;
+  color: var(--white);
+}
+
+.action .blue {
+  background-color: var(--blue-1);
+}
+
+.action .red {
+  background-color: var(--red-1);
+}
+
+.action .green {
+  background-color: var(--green-1);
+}
+
+.confirm {
+  min-width: 100px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+.confirm form {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.confirm input, .confirm button {
+  border:  none;
+  outline: none;
+  font-size: 16px;
+  padding: 6.5px 10px;
+  margin-left: 4px;
+}
+
+.confirm button {
+  cursor: pointer;
+}
+
+.confirm input {
+  cursor: text;
+  max-width: 200px;
+  min-width: 110px;
+}
+
+
+.empty {
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.empty {
+  font-size: 20px;
+}
+
+@media (max-width: 450px){
+  .confirm input {
+    width: 60%;
+  }
+}

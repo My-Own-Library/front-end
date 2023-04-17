@@ -5,7 +5,7 @@ import { useRouter } from "next/router"
 import { FormEvent, useContext, useState } from "react"
 import { ToastContainer, toast } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
-import style from "@/styles/sign_forms.module.css"
+import style from "@/styles/signs/sign_forms.module.css"
 import { roboto } from "@/styles/fonts"
 import { motion } from "framer-motion"
 

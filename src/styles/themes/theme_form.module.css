@@ -1,0 +1,60 @@
+
+.father {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.father button{
+  padding: 6px 15px;
+  font-weight: 500;
+  font-size: 20px;
+  border-radius: 10px;
+  color: var(--white);
+  cursor: pointer;
+  background-color: var(--blue-1);
+  border: none;
+}
+
+.father h1 {
+  color: var(--black-1);
+  margin-bottom: 10px;
+}
+
+.father input {
+  background-color: var(--black-3);
+  border:  none;
+  outline: none;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  height: 40px;
+}
+
+.father .input {
+  position: relative;
+}
+
+.input div {
+  position: absolute;
+  top: 0; right: 0;
+  height: 40px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 10px 10px 0px;
+  color: var(--white);
+  font-size: 20px;
+}
+
+.input .green {
+  background-color: var(--green-1);
+}
+
+.input .red {
+  background-color: var(--red-1);
+}

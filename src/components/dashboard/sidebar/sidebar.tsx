@@ -11,6 +11,7 @@ import UserContext from "@/Contexts/user-context"
 import { ImExit } from "react-icons/im";
 import { logout } from "@/services/user-services"
 import { useRouter } from "next/router"
+import ThemeContext from "@/Contexts/theme-context"
 
 export default function Sidebar() {
   const [selected, setSelected] = useState<boolean>(true)
@@ -18,19 +19,20 @@ export default function Sidebar() {
   const router = useRouter()
 
   const { userData, setUserData } = useContext(UserContext) as any
+  const { themeDataId } = useContext(ThemeContext) as any
 
-  useEffect(() =>{
-    if( userData === undefined || userData === null ) {
+  useEffect(() => {
+    if (userData === undefined || userData === null) {
       router.push("/signin")
     }
   }, [])
 
   async function logoutPost() {
-    try{
+    try {
       await logout(userData.token)
       setUserData(null)
       router.push("/signin")
-    }catch(err: any){
+    } catch (err: any) {
       toast.warn(err?.response?.data.message)
       setUserData(null)
       router.push("/signin")
@@ -50,19 +52,38 @@ export default function Sidebar() {
                 </motion.div>
               </motion.div>
             </header>
-            <SidebarSection main="Topics" subsets={["Create", "Visualization"]} type="topics" />
-            <SidebarSection main="Activities" subsets={["Tasks", "Projects"]} type="activities" />
-            <SidebarSection main="Evolution" subsets={["Overview"]} type="evolution" />
+
+            <div>
+              <SidebarSection main="Themes" subsets={["Manage"]} type="themes" />
+            </div>
+
+            <AnimatePresence>
+
+              {themeDataId !== undefined ?
+                <motion.div exit={{ x: -400 }} className={style.themePossible}
+                  initial={{ x: -400 }}
+                  animate={{ x: 0 }} transition={{ duration: 0.8, type: "tween" }}>
+
+                  <SidebarSection main="Topics" subsets={["Create", "Visualization"]} type="topics" />
+                  <SidebarSection main="Activities" subsets={["Tasks", "Projects"]} type="activities" />
+                  <SidebarSection main="Evolution" subsets={["Overview"]} type="evolution" />
+
+                </motion.div>
+                : null}
+            </AnimatePresence>
+
             <footer>
               <motion.button onClick={() => logoutPost()}>
-                <ImExit/>
+                <ImExit />
               </motion.button>
             </footer>
+
           </motion.aside>
 
           : null
         }
       </AnimatePresence>
+
       <AnimatePresence>
         {!selected ?
           <motion.aside className={`${style.contract} ${roboto.className}`} animate={{ x: 0 }} onClick={() => setSelected(!selected)}
@@ -75,7 +96,7 @@ export default function Sidebar() {
         }
       </AnimatePresence>
 
-      <ToastContainer/>
+      <ToastContainer />
     </>
   )
 }

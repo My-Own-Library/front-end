@@ -34,7 +34,6 @@
     #00000080
   );
 
-  
   --background-black: #111111;
   --black-border: #272727;
   --dark-letter: #444444;
@@ -47,6 +46,16 @@
   --black-4: #666666;
   --black-5: #808080;
   --black-6: #acacac;
+  --black-7: #cecece;
+
+  --green-1: #15ce58;
+  --green-2: #34e775;
+
+  --blue-1: #368fdd;
+  --blue-2: #6ab1f0;
+
+  --red-1: #E8512E;
+  --red-2: #f57c61;
 
   --callout-rgb: 238, 240, 241;
   --callout-border-rgb: 172, 175, 176;

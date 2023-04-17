@@ -16,6 +16,6 @@ export async function putTheme(token: string, name: string,id: number){
 }
 
 export async function deleteTheme(token: string, id: number){
-  const response = await api.put(`/themes/${id}`, {headers: {Authorization: `Bearer ${token}`}})
+  const response = await api.delete(`/themes/${id}`, {headers: {Authorization: `Bearer ${token}`}})
   return response.data
 }

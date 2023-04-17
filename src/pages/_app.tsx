@@ -1,3 +1,4 @@
+import { RenderProvider } from '@/Contexts/render-context'
 import { ThemeProvider } from '@/Contexts/theme-context'
 import { UserProvider } from '@/Contexts/user-context'
 import '@/styles/globals.css'
@@ -7,7 +8,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <UserProvider>
       <ThemeProvider>
-        <Component {...pageProps} />
+        <RenderProvider>
+          <Component {...pageProps} />
+        </RenderProvider>
       </ThemeProvider>
     </UserProvider>
   )
